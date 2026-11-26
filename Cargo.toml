@@ -1,0 +1,28 @@
+[package]
+name = "movui"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+lto = true
+strip = true
+codegen-units = 1
+
+[dependencies]
+iced_fonts = { version = "0.3.0", features = ["codicon"] }
+rfd = "0.18.0"
+
+[dependencies.iced]
+version = "0.14.0"
+default-features = false
+features = [
+    "crisp",
+    "linux-theme-detection",
+    "thread-pool",
+    "tiny-skia",
+    "wayland",
+    "web-colors",
+    # "wgpu",
+    # "wgpu-bare",
+    "x11"
+]
